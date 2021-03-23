@@ -1,0 +1,45 @@
+---
+title: "Limma_lesson"
+author: "Simone Avesani"
+date: "3/5/2021"
+output: html_document
+---
+
+
+## Aim
+
+Easily and efficiently analyse RNA-sequencing data. Starting with counts summarised at the gene-level, a typical analysis involves:
+
+- pre-processing
+- exploratory data analysis
+- differential expression testing
+- pathway analysis
+
+In this workflow we analyse RNA-sequencing data obtained in the previous lesson, deriving from Olfactory Mucosa using the following packages:
+- edgeR: to import, organise, filter and normalise the data
+- limma: assess differential expression and perform gene set testing
+- Glimma package: interactive exploration of the results, to examinate individual samples and genes
+
+```{r}
+BiocManager::install("limma", "Glimma", "edgeR")
+
+library(limma)
+library(Glimma)
+library(edgeR)
+```
+
+
+## Data description 
+
+The analysis' input is the count matrix generated during the quantification step.  
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
